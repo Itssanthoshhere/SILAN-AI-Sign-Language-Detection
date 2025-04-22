@@ -1,0 +1,19 @@
+# Core Libraries
+numpy
+pandas
+
+# Deep Learning
+tensorflow
+keras
+
+# Image Processing
+opencv-python
+matplotlib
+Pillow
+
+# Flask Web App
+flask
+
+# Utilities
+scikit-learn
+jupyter
