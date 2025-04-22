@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="SILAN AI - Real-time sign language detection system" />
+    <title>SILAN AI - Real-Time Sign Language Detection</title>
+
+    <!-- Styles & Fonts -->
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- ========== HEADER ========== -->
+    <header class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="logo" aria-label="SILAN AI Homepage">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"></path>
+                    <path
+                        d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9">
+                    </path>
+                    <path d="m2 15 6 6"></path>
+                    <path
+                        d="M19.5 8.5c.7-.7 1.5-1.6 1.5-2.7A2.73 2.73 0 0 0 16 4a2.78 2.78 0 0 0-5 1.8c0 1.2.8 2 1.5 2.8L16 12Z">
+                    </path>
+                </svg>
+                <span>SILAN</span>
+            </a>
+
+            <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+
+            <nav class="nav-links" aria-label="Main navigation">
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How it Works</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                </ul>
+            </nav>
+
+            <a href="#video" class="btn-primary">Get Started</a>
+        </div>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1 id="hero-heading">Welcome to SILAN AI</h1>
+                </div>
+                <div class="hero-info">
+                    <p>Breaking barriers with real-time sign language interpretation.</p>
+                    <a href="#video" class="btn btn-primary">Start Interpreting</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Feed Section -->
+        <section id="video" class="video-section" aria-labelledby="video-heading">
+            <div class="container video-box">
+                <h2 id="video-heading">Live Sign Language Detection</h2>
+                <p>Translate sign language into text instantly with our advanced AI technology</p>
+                <p>Hold your gesture inside the green box for a live prediction.</p>
+
+                <div class="feed-wrapper">
+                    <!-- The video feed comes from the backend. If using Flask, Django, etc., make sure this link works -->
+                    <img src="{{ url_for('video_feed') }}" alt="Live video feed for sign language detection" />
+                    <!-- Green detection box -->
+                    <div class="green-box"></div>
+                    <!-- <h3>Prediction:</h3>
+                    <p id="prediction">Loading...</p> -->
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features fade-in" aria-labelledby="features-heading">
+            <div class="container">
+                <h2 id="features-heading">Features</h2>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <h3>🤖 AI-Based Recognition</h3>
+                        <p>Advanced hand gesture recognition using deep learning models.</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>⚡ Real-Time Detection</h3>
+                        <p>Instant translation with minimal latency for smooth communication.</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>🎤 Voice & Text Output</h3>
+                        <p>Seamless conversion of detected signs to speech and text.</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>🎨 Accessible UI</h3>
+                        <p>Clean, user-friendly interface for users of all ages.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="how-it-works fade-in" aria-labelledby="how-it-works-heading">
+            <div class="container">
+                <h2 id="how-it-works-heading">How it Works</h2>
+                <p>
+                    SILAN AI captures your gestures through a webcam, processes them via our trained models,
+                    then displays the translated results in real-time as text or speech.
+                </p>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="benefits" class="benefits fade-in" aria-labelledby="benefits-heading">
+            <div class="container">
+                <h2 id="benefits-heading">Why SILAN AI?</h2>
+                <ul>
+                    <li>🌍 Bridges communication gaps between deaf and hearing communities.</li>
+                    <li>🛠️ Enhances accessibility in education and workplaces.</li>
+                    <li>💡 Promotes inclusivity with cutting-edge technology.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <!-- <footer class="footer" aria-labelledby="footer-heading">
+        <div class="container">
+            <h2 id="footer-heading" class="sr-only">Footer Navigation</h2>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How it Works</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <p>© 2025 SILAN AI. All rights reserved.</p>
+        </div>
+    </footer> -->
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer" aria-labelledby="footer-heading">
+        <div class="container footer-container">
+
+            <!-- Logo and Tagline Block -->
+            <div class="footer-logo-block">
+                <div class="footer-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"></path>
+                        <path
+                            d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9">
+                        </path>
+                        <path d="m2 15 6 6"></path>
+                        <path
+                            d="M19.5 8.5c.7-.7 1.5-1.6 1.5-2.7A2.73 2.73 0 0 0 16 4a2.78 2.78 0 0 0-5 1.8c0 1.2.8 2 1.5 2.8L16 12Z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="footer-text">
+                    <span class="footer-brand">SILAN</span>
+                    <p class="footer-tagline">Making sign language learning accessible to everyone</p>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="footer-nav">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How it Works</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <!-- <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Contact</a></li> -->
+            </ul>
+
+            <!-- Copyright -->
+            <p class="footer-copy">© 2025 SILAN AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- ========== SCRIPTS ========== -->
+    <script>
+        // Mobile Navigation Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+        // Scroll Fade-In Animations
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOpts = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -20px 0px'
+        };
+        const appearScroll = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            });
+        }, appearOpts);
+        faders.forEach(fader => appearScroll.observe(fader));
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>
